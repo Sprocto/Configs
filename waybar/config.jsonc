@@ -14,6 +14,7 @@
         "custom/waybar-mpris",
     ],
     "modules-right": [
+        "pulseaudio",
         "cpu",
         "memory",
         "temperature",
@@ -70,4 +71,19 @@
      "on-click-right": "waybar-mpris --send player-next",
      "escape": true
     },
+    "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}% ",
+    "format-muted": " Muted",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "on-click": "pavucontrol"
+  },
 }
