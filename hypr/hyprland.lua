@@ -45,10 +45,11 @@ local menu        = "hyprlauncher"
 -- Or execute your favorite apps at launch like this:
 --
  hl.on("hyprland.start", function () 
-   hl.exec_cmd("waybar")
-   hl.exec_cmd("hyprpaper")
- end)
-
+   hl.exec_cmd("waybar & hyprpaper")
+   hl.exec_cmd("vesktop")
+   hl.exec_cmd("kitty & kitty -e cmus")
+   hl.exec_cmd("steam steam://rungameid/3419430")
+end)
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----
@@ -105,8 +106,8 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
-        rounding_power = 2,
+        rounding       = 5,
+        rounding_power = 1,
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
@@ -185,7 +186,36 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "
 --     border_size = 0,
 --     rounding    = 0,
 -- })
-
+hl.window_rule({
+  name = "DeskSaw",
+  match = {
+    class = "deskSaw"
+  },
+  float = true,
+  pin = true,
+  no_blur = true,
+  no_shadow = true,
+  no_anim = true,
+  no_focus = true,
+  no_max_size = true,
+  min_size = {1920, 1080},
+  border_size = 0
+})
+hl.window_rule({
+  name = "BongoCat",
+  match = {
+    class = "BongoCat.x86_64"
+  },
+  float = true,
+  pin = true,
+  no_blur = true,
+  no_shadow = true,
+  no_anim = true,
+  no_focus = true,
+  no_max_size = true,
+  min_size = {1920, 1080},
+  border_size = 0
+})
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
