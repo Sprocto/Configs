@@ -46,9 +46,6 @@ local menu        = "hyprlauncher"
 --
  hl.on("hyprland.start", function () 
    hl.exec_cmd("waybar & hyprpaper")
-   hl.exec_cmd("vesktop")
-   hl.exec_cmd("kitty & kitty -e cmus")
-   hl.exec_cmd("steam steam://rungameid/3419430")
 end)
 
 -------------------------------
