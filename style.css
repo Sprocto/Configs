@@ -1,0 +1,160 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: ShureTechMono Nerd Font Propo, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+    background-color: transparent;
+}
+window#waybar.solo {
+    background-color: #FFFFFF;
+}
+*/
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #a37800;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused, #workspaces button.active {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#custom-weather,
+#cava,
+#window,
+#custom-launcher,
+#custom-cmus,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+    border-radius: 26px;
+    margin: 0 1px;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: #32343e;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#custom-weather {
+    background-color: #404c54;
+    color: #ffffff;
+}
+
+#cava {
+    background-color: #478d73;
+    color: #ffffff;
+}
+
+#custom-cmus {
+    background-color: #446b6a;
+}
+
+#cpu {
+    background-color: #478d73;
+    color: #ffffff;
+}
+
+#window {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0 10px;
+}
+
+#memory {
+    background-color: #446b6a;
+}
+
+#pulseaudio {
+    background-color: #5ba94d;
+    color: #ffffff;
+}
+
+#custom-launcher {
+    background-color: #32343e;
+}
+
+#temperature {
+    background-color: #404c54 ;
+}
+
+#temperature.critical {
+    background-color: #ff0400;
+}
